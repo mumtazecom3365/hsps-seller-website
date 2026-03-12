@@ -1,820 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HSP's Seller | Marketplace Growth Partner</title>
-  <meta
-    name="description"
-    content="HSP's Seller helps brands grow on Amazon, Walmart, eBay, and Etsy with Amazon FBA, PPC, account management, and marketplace expansion services."
-  />
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #081120;
-      color: #ffffff;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 14px 24px;
-      border-radius: 10px;
-      font-weight: bold;
-      transition: 0.3s ease;
-    }
-
-    .btn-primary {
-      background: linear-gradient(90deg, #10b981, #0ea5e9);
-      color: white;
-    }
-
-    .btn-primary:hover {
-      opacity: 0.9;
-    }
-
-    .btn-secondary {
-      border: 1px solid rgba(255,255,255,0.18);
-      color: white;
-      background: rgba(255,255,255,0.04);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255,255,255,0.08);
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(8, 17, 32, 0.92);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 0;
-      gap: 20px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .brand-text h1 {
-      font-size: 24px;
-      line-height: 1.1;
-    }
-
-    .brand-text p {
-      font-size: 13px;
-      color: #9fb2c8;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      color: #d8e3ef;
-      font-size: 14px;
-    }
-
-    .hero {
-      padding: 80px 0 70px;
-      background:
-        radial-gradient(circle at top right, rgba(16,185,129,0.22), transparent 30%),
-        radial-gradient(circle at left, rgba(14,165,233,0.18), transparent 28%);
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 10px 16px;
-      border-radius: 999px;
-      background: rgba(16,185,129,0.12);
-      border: 1px solid rgba(16,185,129,0.25);
-      color: #8df0c5;
-      font-size: 14px;
-      margin-bottom: 18px;
-    }
-
-    .hero h2 {
-      font-size: 52px;
-      line-height: 1.1;
-      margin-bottom: 18px;
-    }
-
-    .hero p {
-      color: #bfd0e0;
-      font-size: 18px;
-      max-width: 700px;
-      margin-bottom: 28px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-bottom: 30px;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-    }
-
-    .stat {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 16px;
-      padding: 18px;
-      text-align: center;
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 22px;
-      margin-bottom: 6px;
-    }
-
-    .stat span {
-      color: #aac0d5;
-      font-size: 14px;
-    }
-
-    .hero-card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 24px;
-      padding: 28px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
-    }
-
-    .hero-card h3 {
-      font-size: 24px;
-      margin-bottom: 12px;
-    }
-
-    .hero-card p {
-      font-size: 16px;
-      margin-bottom: 18px;
-    }
-
-    .hero-list {
-      list-style: none;
-      display: grid;
-      gap: 12px;
-    }
-
-    .hero-list li {
-      background: rgba(0,0,0,0.2);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 12px;
-      padding: 12px 14px;
-      color: #dce9f5;
-    }
-
-    section {
-      padding: 75px 0;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 16px;
-      color: #87efc0;
-      font-size: 14px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .section-heading {
-      text-align: center;
-      font-size: 38px;
-      margin-bottom: 14px;
-    }
-
-    .section-desc {
-      text-align: center;
-      color: #b7cadc;
-      max-width: 850px;
-      margin: 0 auto 40px;
-    }
-
-    .services-grid,
-    .cases-grid,
-    .testimonials-grid {
-      display: grid;
-      gap: 24px;
-    }
-
-    .services-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .cases-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .testimonials-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    .card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 20px;
-      padding: 24px;
-    }
-
-    .card h3 {
-      margin-bottom: 12px;
-      font-size: 22px;
-    }
-
-    .card p {
-      color: #bfd0e0;
-      margin-bottom: 14px;
-    }
-
-    .card ul {
-      padding-left: 18px;
-      color: #dbe8f4;
-    }
-
-    .card ul li {
-      margin-bottom: 8px;
-    }
-
-    .about-grid,
-    .contact-grid,
-    .booking-grid,
-    .seo-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      gap: 28px;
-      align-items: start;
-    }
-
-    .about-box,
-    .booking-box,
-    .contact-box,
-    .seo-box {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 22px;
-      padding: 28px;
-    }
-
-    .about-box p,
-    .booking-box p,
-    .contact-box p,
-    .seo-box p {
-      color: #bfd0e0;
-      margin-bottom: 16px;
-    }
-
-    .testimonial-name {
-      color: #8cebc2;
-      font-weight: bold;
-      margin-bottom: 8px;
-    }
-
-    .case-result {
-      display: inline-block;
-      background: rgba(16,185,129,0.12);
-      border: 1px solid rgba(16,185,129,0.22);
-      color: #8df0c5;
-      border-radius: 999px;
-      padding: 8px 12px;
-      font-size: 13px;
-      margin-bottom: 14px;
-    }
-
-    .seo-list {
-      list-style: none;
-      display: grid;
-      gap: 12px;
-    }
-
-    .seo-list li {
-      background: rgba(0,0,0,0.18);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 12px;
-      padding: 12px 14px;
-      color: #dbe8f4;
-    }
-
-    form {
-      display: grid;
-      gap: 14px;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 14px 16px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.1);
-      background: #0b1628;
-      color: white;
-      outline: none;
-    }
-
-    input::placeholder,
-    textarea::placeholder {
-      color: #8fa5ba;
-    }
-
-    textarea {
-      min-height: 140px;
-      resize: vertical;
-    }
-
-    .contact-links {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 10px;
-      margin-bottom: 18px;
-    }
-
-    footer {
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding: 26px 0;
-      color: #9cb0c4;
-      text-align: center;
-      background: rgba(0,0,0,0.15);
-    }
-
-    .small {
-      font-size: 14px;
-      color: #9fb2c8;
-    }
-
-    @media (max-width: 992px) {
-      .hero-grid,
-      .about-grid,
-      .contact-grid,
-      .booking-grid,
-      .seo-grid,
-      .services-grid,
-      .cases-grid,
-      .testimonials-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .stats {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .hero h2 {
-        font-size: 38px;
-      }
-
-      .nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .nav-links {
-        gap: 12px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .hero {
-        padding-top: 55px;
-      }
-
-      .hero h2 {
-        font-size: 32px;
-      }
-
-      .section-heading {
-        font-size: 30px;
-      }
-
-      .stats {
-        grid-template-columns: 1fr;
-      }
-
-      .container {
-        width: 92%;
-      }
-    }
-  </style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HSP's Seller | Marketplace Growth Partner</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#081120;
+color:white;
+line-height:1.6;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+header{
+padding:20px;
+border-bottom:1px solid #333;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+}
+
+section{
+padding:60px 0;
+}
+
+h2{
+font-size:34px;
+margin-bottom:20px;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.card{
+background:#101c30;
+padding:20px;
+border-radius:10px;
+}
+
+.case-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+img{
+width:100%;
+border-radius:10px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 20px;
+background:#10b981;
+color:white;
+border-radius:6px;
+text-decoration:none;
+margin-top:10px;
+}
+
+.contact{
+background:#101c30;
+padding:30px;
+border-radius:10px;
+}
+
+footer{
+text-align:center;
+padding:30px;
+border-top:1px solid #333;
+}
+
+</style>
+
 </head>
+
 <body>
 
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <svg width="62" height="62" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="HSP's Seller logo">
-          <defs>
-            <linearGradient id="logoGrad" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#22c55e"/>
-              <stop offset="1" stop-color="#0ea5e9"/>
-            </linearGradient>
-          </defs>
-          <path d="M10 14H18L22 34H44C45.8 34 47.4 32.8 47.8 31.1L51 18H21" stroke="url(#logoGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="24" cy="48" r="4" fill="url(#logoGrad)"/>
-          <circle cx="42" cy="48" r="4" fill="url(#logoGrad)"/>
-          <path d="M24 30V20M32 30V16M40 30V12" stroke="url(#logoGrad)" stroke-width="4" stroke-linecap="round"/>
-          <path d="M20 28C25 26 29 24 33 20C37 16 41 13 48 10" stroke="url(#logoGrad)" stroke-width="4" stroke-linecap="round"/>
-          <path d="M45 10H50V15" stroke="url(#logoGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+<header class="container">
 
-        <div class="brand-text">
-          <h1>HSP's Seller</h1>
-          <p>Marketplace Growth Partner</p>
-        </div>
-      </div>
+<div class="logo">
+HSP's Seller
+</div>
 
-      <nav class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#case-studies">Case Studies</a>
-        <a href="#seo-pages">SEO Pages</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+<p>Marketplace Growth Partner</p>
 
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <div class="badge">Helping brands grow on Amazon, Walmart, eBay, and Etsy</div>
-        <h2>Build, manage, and scale your ecommerce business with confidence.</h2>
-        <p>
-          HSP's Seller helps brands, entrepreneurs, and businesses launch and grow across leading marketplaces through expert strategy, execution, and account management.
-        </p>
+</header>
 
-        <div class="hero-buttons">
-          <a class="btn btn-primary" href="https://wa.me/923287283071" target="_blank">Chat on WhatsApp</a>
-          <a class="btn btn-secondary" href="#contact">Get a Free Consultation</a>
-        </div>
+<section class="container">
 
-        <div class="stats">
-          <div class="stat">
-            <strong>Amazon</strong>
-            <span>Growth Expertise</span>
-          </div>
-          <div class="stat">
-            <strong>Walmart</strong>
-            <span>Marketplace Support</span>
-          </div>
-          <div class="stat">
-            <strong>eBay</strong>
-            <span>Seller Expansion</span>
-          </div>
-          <div class="stat">
-            <strong>Etsy</strong>
-            <span>Multi-Channel Reach</span>
-          </div>
-        </div>
-      </div>
+<h2>Our Services</h2>
 
-      <div class="hero-card">
-        <h3>Your Marketplace Growth Experts</h3>
-        <p>
-          We provide focused ecommerce services built to help sellers launch faster, scale smarter, and stay competitive.
-        </p>
-        <ul class="hero-list">
-          <li>Amazon FBA and Private Label Growth</li>
-          <li>Amazon PPC and Listing Optimization</li>
-          <li>Account Health and A-Z Management</li>
-          <li>Walmart, eBay, and Etsy Expansion</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+<div class="services">
 
-  <section id="services">
-    <div class="container">
-      <div class="section-title">Services</div>
-      <h2 class="section-heading">Marketplace services designed to grow your business</h2>
-      <p class="section-desc">
-        HSP's Seller offers end-to-end support for brands, wholesalers, and private label sellers across major online marketplaces.
-      </p>
+<div class="card">
+<h3>Amazon FBA</h3>
+<p>Complete support for launching and scaling Amazon FBA businesses.</p>
+</div>
 
-      <div class="services-grid">
-        <div class="card">
-          <h3>Amazon FBA</h3>
-          <p>End-to-end support for launching, managing, and scaling Amazon FBA businesses.</p>
-          <ul>
-            <li>Product research</li>
-            <li>Launch strategy</li>
-            <li>Listing support</li>
-            <li>Growth planning</li>
-          </ul>
-        </div>
+<div class="card">
+<h3>Amazon FBA Wholesale</h3>
+<p>Supplier sourcing, brand approvals and wholesale scaling.</p>
+</div>
 
-        <div class="card">
-          <h3>Amazon FBA Wholesale</h3>
-          <p>Wholesale sourcing, brand approvals, catalog setup, and operational support.</p>
-          <ul>
-            <li>Supplier workflow</li>
-            <li>Brand approvals</li>
-            <li>Catalog management</li>
-            <li>Scaling systems</li>
-          </ul>
-        </div>
+<div class="card">
+<h3>Amazon FBA Private Label</h3>
+<p>Private label product research, launch and growth strategies.</p>
+</div>
 
-        <div class="card">
-          <h3>Amazon FBA Private Label</h3>
-          <p>Private label support for research, branding, launch, and long-term growth.</p>
-          <ul>
-            <li>Niche validation</li>
-            <li>Brand positioning</li>
-            <li>Launch planning</li>
-            <li>Conversion optimization</li>
-          </ul>
-        </div>
+<div class="card">
+<h3>Amazon PPC</h3>
+<p>Campaign creation, keyword targeting and ACOS optimization.</p>
+</div>
 
-        <div class="card">
-          <h3>Amazon Account Management</h3>
-          <p>Daily seller account operations with complete A-Z support.</p>
-          <ul>
-            <li>Store operations</li>
-            <li>Inventory coordination</li>
-            <li>Case handling</li>
-            <li>Performance tracking</li>
-          </ul>
-        </div>
+<div class="card">
+<h3>Amazon Account Management</h3>
+<p>Full A-Z management for Amazon seller accounts.</p>
+</div>
 
-        <div class="card">
-          <h3>Amazon PPC</h3>
-          <p>Campaign setup, bid optimization, and keyword strategy for profitable growth.</p>
-          <ul>
-            <li>Campaign creation</li>
-            <li>Keyword targeting</li>
-            <li>Bid optimization</li>
-            <li>ACOS improvement</li>
-          </ul>
-        </div>
+<div class="card">
+<h3>Marketplace Expansion</h3>
+<p>Launch and management on Walmart, eBay and Etsy.</p>
+</div>
 
-        <div class="card">
-          <h3>Amazon Account Health</h3>
-          <p>Proactive monitoring and issue resolution to keep your account safe and compliant.</p>
-          <ul>
-            <li>Policy review</li>
-            <li>Health monitoring</li>
-            <li>Appeal support</li>
-            <li>Compliance planning</li>
-          </ul>
-        </div>
+</div>
 
-        <div class="card">
-          <h3>Walmart Marketplace</h3>
-          <p>Store setup, listing management, and growth support for Walmart sellers.</p>
-          <ul>
-            <li>Seller center setup</li>
-            <li>Product publishing</li>
-            <li>Optimization support</li>
-            <li>Marketplace growth</li>
-          </ul>
-        </div>
+</section>
 
-        <div class="card">
-          <h3>eBay Management</h3>
-          <p>Listing, operations, and account handling for eBay sellers.</p>
-          <ul>
-            <li>Store setup</li>
-            <li>Product listings</li>
-            <li>Sales optimization</li>
-            <li>Seller support</li>
-          </ul>
-        </div>
 
-        <div class="card">
-          <h3>Etsy Management</h3>
-          <p>Shop setup, product publishing, SEO, and support for Etsy businesses.</p>
-          <ul>
-            <li>Shop branding</li>
-            <li>Tag optimization</li>
-            <li>Product publishing</li>
-            <li>Store performance</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="container">
 
-  <section id="about">
-    <div class="container about-grid">
-      <div class="about-box">
-        <div class="section-title" style="text-align:left;">About Us</div>
-        <h2 style="font-size:34px; margin-bottom:18px;">Your growth is our business.</h2>
-        <p>
-          We are a results-driven eCommerce consultancy dedicated to helping brands, entrepreneurs, and businesses grow and succeed in the world’s largest online marketplaces.
-        </p>
-        <p>
-          With deep expertise in Amazon, Walmart, eBay, and Etsy, we provide end-to-end solutions that simplify selling online while maximizing performance and profitability.
-        </p>
-        <p>
-          From Amazon FBA Private Label and Wholesale to PPC, SEO, inventory support, and full A-Z account management, our team helps sellers build sustainable growth through data-driven strategy and consistent optimization.
-        </p>
-      </div>
+<h2>Amazon PPC Case Study</h2>
 
-      <div class="about-box">
-        <div class="section-title" style="text-align:left;">Why Clients Choose Us</div>
-        <h3 style="font-size:24px; margin-bottom:14px;">Reliable strategy, execution, and communication</h3>
-        <ul class="hero-list">
-          <li>Results-driven marketplace growth strategies</li>
-          <li>Transparent communication and ongoing support</li>
-          <li>Multi-platform expertise across major marketplaces</li>
-          <li>Focused on performance, compliance, and profitability</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+<p>Real campaign results showing how PPC optimization increased revenue and improved ACOS performance.</p>
 
-  <section id="case-studies">
-    <div class="container">
-      <div class="section-title">Case Studies</div>
-      <h2 class="section-heading">Success stories that build trust</h2>
-      <p class="section-desc">
-        Use these case-study style blocks to show visitors how your strategy translates into business growth.
-      </p>
+<div class="case-grid">
 
-      <div class="cases-grid">
-        <div class="card">
-          <div class="case-result">Private Label Growth</div>
-          <h3>Listing + PPC Improvement</h3>
-          <p>
-            Helped a private label seller improve visibility, conversion rate, and sales momentum through better listing optimization and structured PPC campaigns.
-          </p>
-        </div>
+<div class="card">
 
-        <div class="card">
-          <div class="case-result">Wholesale Scale-Up</div>
-          <h3>Catalog Expansion Support</h3>
-          <p>
-            Supported wholesale operations with catalog setup, account handling, and inventory planning to make scaling smoother and more profitable.
-          </p>
-        </div>
+<img src="oct.png">
 
-        <div class="card">
-          <div class="case-result">Multi-Marketplace Launch</div>
-          <h3>Beyond Amazon Expansion</h3>
-          <p>
-            Helped a seller expand into Walmart and eBay with onboarding, listing structure, and marketplace setup support.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+<h3>October 2025</h3>
 
-  <section>
-    <div class="container">
-      <div class="section-title">Testimonials</div>
-      <h2 class="section-heading">What clients say about HSP's Seller</h2>
+<p>
+ROAS: 3.12  
+Spend: $2,333  
+Sales: $7,289  
+ACOS: 32%
+</p>
 
-      <div class="testimonials-grid">
-        <div class="card">
-          <div class="testimonial-name">Michael R. – Amazon Private Label Seller</div>
-          <p>Working with this team completely transformed my Amazon business. Their expertise in listing optimization and PPC helped increase my sales within the first few months.</p>
-        </div>
+</div>
 
-        <div class="card">
-          <div class="testimonial-name">Sarah L. – Ecommerce Brand Owner</div>
-          <p>Their Amazon SEO and listing optimization strategies significantly improved my visibility and conversions. I highly recommend their services.</p>
-        </div>
 
-        <div class="card">
-          <div class="testimonial-name">David K. – Wholesale Seller</div>
-          <p>Their Amazon FBA wholesale support helped me scale my store much faster than I expected. Everything was handled professionally.</p>
-        </div>
+<div class="card">
 
-        <div class="card">
-          <div class="testimonial-name">Jessica M. – Amazon Seller</div>
-          <p>The A-Z account management service has been a game changer for my business. They manage everything smoothly while keeping me updated.</p>
-        </div>
+<img src="nov.png">
 
-        <div class="card">
-          <div class="testimonial-name">Robert T. – Multi-Marketplace Seller</div>
-          <p>They helped me successfully launch my products on Walmart and eBay. Their marketplace knowledge is impressive and the onboarding was smooth.</p>
-        </div>
+<h3>November 2025</h3>
 
-        <div class="card">
-          <div class="testimonial-name">Emily S. – Etsy Store Owner</div>
-          <p>Their optimization strategies helped my Etsy store gain more visibility and consistent sales. The team is supportive and professional.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<p>
+ROAS: 5.45  
+Spend: $6,657  
+Sales: $36,302  
+ACOS: 18%
+</p>
 
-  <section id="seo-pages">
-    <div class="container seo-grid">
-      <div class="seo-box">
-        <div class="section-title" style="text-align:left;">SEO Pages</div>
-        <h2 style="font-size:34px; margin-bottom:18px;">Pages to help you get found on Google</h2>
-        <p>
-          These are the service pages you should create next to attract high-intent clients from search engines:
-        </p>
-        <ul class="seo-list">
-          <li>Amazon PPC Management Services</li>
-          <li>Amazon FBA Private Label Agency</li>
-          <li>Amazon Wholesale Account Management</li>
-          <li>Walmart Marketplace Setup Services</li>
-          <li>eBay Store Management Services</li>
-          <li>Etsy SEO and Store Optimization</li>
-        </ul>
-      </div>
+</div>
 
-      <div class="booking-box">
-        <div class="section-title" style="text-align:left;">Book a Call</div>
-        <h3 style="font-size:26px; margin-bottom:14px;">Ready for a free strategy consultation?</h3>
-        <p>
-          Book a call or message us directly to discuss your Amazon, Walmart, eBay, or Etsy growth goals.
-        </p>
-        <div class="hero-buttons">
-          <a class="btn btn-primary" href="https://wa.me/923287283071" target="_blank">Book on WhatsApp</a>
-          <a class="btn btn-secondary" href="mailto:Mumtazecom3365@gmail.com">Email Us</a>
-        </div>
-        <p class="small">Add your Calendly link here later when ready.</p>
-      </div>
-    </div>
-  </section>
 
-  <section id="contact">
-    <div class="container contact-grid">
-      <div class="contact-box">
-        <div class="section-title" style="text-align:left;">Contact</div>
-        <h2 style="font-size:34px; margin-bottom:18px;">Let’s build your ecommerce growth engine</h2>
-        <p>
-          Reach out for Amazon FBA, PPC, account management, Walmart, eBay, and Etsy services.
-        </p>
+<div class="card">
 
-        <div class="contact-links">
-          <a class="btn btn-primary" href="https://wa.me/923287283071" target="_blank">Chat on WhatsApp</a>
-          <a class="btn btn-secondary" href="mailto:Mumtazecom3365@gmail.com">Email Us</a>
-        </div>
+<img src="dec.png">
 
-        <p><strong>Email:</strong> Mumtazecom3365@gmail.com</p>
-        <p><strong>WhatsApp:</strong> +923287283071</p>
-        <p><strong>Service Area:</strong> Worldwide</p>
-      </div>
+<h3>December 2025</h3>
 
-      <div class="contact-box">
-        <div class="section-title" style="text-align:left;">Send Inquiry</div>
-        <form action="https://formsubmit.co/Mumtazecom3365@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="New inquiry from HSP's Seller website" />
-          <input type="hidden" name="_captcha" value="false" />
+<p>
+ROAS: 6.28  
+Spend: $7,211  
+Sales: $45,289  
+ACOS: 15.92%
+</p>
 
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <input type="text" name="service" placeholder="Service Needed" required />
-          <textarea name="message" placeholder="Tell us about your project" required></textarea>
+</div>
 
-          <button class="btn btn-primary" type="submit" style="border:none; cursor:pointer;">
-            Send Inquiry
-          </button>
-        </form>
-      </div>
-    </div>
-  </section>
+</div>
 
-  <footer>
-    <div class="container">
-      © 2026 HSP's Seller. All rights reserved.
-    </div>
-  </footer>
+</section>
+
+
+<section class="container">
+
+<h2>PPC Dashboard Results</h2>
+
+<div class="case-grid">
+
+<div class="card">
+<img src="nov-table.png">
+<p>November dashboard performance showing improved campaign efficiency.</p>
+</div>
+
+<div class="card">
+<img src="dec-table.png">
+<p>December dashboard showing higher ROAS and lower ACOS.</p>
+</div>
+
+<div class="card">
+<img src="sales-total.png">
+<p>Total ordered product sales from Nov 1 – Dec 31: <strong>$116,259</strong></p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="container contact">
+
+<h2>Contact</h2>
+
+<p>Email: Mumtazecom3365@gmail.com</p>
+
+<p>Whatsapp: +923287283071</p>
+
+<a class="btn" href="https://wa.me/923287283071">Chat on WhatsApp</a>
+
+</section>
+
+
+<footer>
+
+© 2026 HSP's Seller
+
+</footer>
+
 
 </body>
 </html>
